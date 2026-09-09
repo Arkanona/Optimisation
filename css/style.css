@@ -139,7 +139,7 @@ main{
 
     .section1{
         background-color: var(--main-color);
-
+        margin-top: 40px;
         >div{
             display:grid;
             grid-template-columns: 40% auto;
@@ -170,6 +170,29 @@ main{
                         &:hover{
                             background-color: rgba(165, 42, 42, 0.297);
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    .section2{
+        .s2d2{
+            display: flex;
+            article {
+                flex: 1 0 20%;
+                box-shadow: 3px 5px 12px 18px #f7f6f6;
+                img{
+                    height: 200px;
+                }
+                div{
+                    height: 150px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 12px;
+                    h3{
+                        font-size: 20px;
                     }
                 }
             }
