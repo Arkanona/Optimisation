@@ -58,12 +58,34 @@ a{
 
 /* header */
 
-.header{
-    background-color: var(--black);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:0 10px;
+header{
+    background: var(--black);
+    .divHeader{
+        max-width: 1440px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+        a{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            span{
+                font-size: 36px;
+            }
+            &:hover{
+                color: #fbdcb9;
+            }
+            transition:all 0.2s ease-in-out;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            padding: 0;
+            gap: 40px;
+        }
+    }
 }
 
 .header ul{
@@ -87,7 +109,7 @@ a{
 }
 
 #Cart{
-    position: absolute;
+    /* position: absolute; */
     right: 20px;
     color: #fff;
 }
