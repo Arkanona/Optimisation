@@ -119,12 +119,34 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    gap: 20px;
+    ul{
+        padding: 0;
+    }
     a{
         display: flex;
         gap:12px;
         align-items: center;
         &:hover{
             color: #fbdcb9;
+        }
+    }
+    form{
+        color: white;
+        display: grid;
+        padding-left: 10px;
+        input[type="submit"]{
+            background-color: var(--white);
+            color:var(--black);
+            border-style: solid;
+            border-width: 1px;
+            margin-top: 10px;
+            &:hover{
+                background-color: var(--black);
+                color: white;
+                border-color: white;
+            }
         }
     }
     div{
@@ -135,16 +157,35 @@ footer{
         font-size: 24px;
         color: white;
     }
-
+    .partenaire{
+        ul{
+            li{
+                padding-top: 8px;
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
     .apropos{
         color: white;
+        p{
+            font-size: 16px;
+        }
     }
     .footerp1{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
         padding: 15px;
         background: var(--black);
+        ul{
+            li{
+                padding-top: 8px;
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
     }
 }
 
@@ -317,6 +358,15 @@ div.tags p,
         display: none;
     } */
 
+    footer{
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        .partenaire{
+            justify-self: center;
+        }
+    }
+
     .header ul {
         display: none;
         flex-direction: column;
@@ -339,5 +389,6 @@ div.tags p,
     .menu-toggle {
         display: block;
     }
+
 }
 
