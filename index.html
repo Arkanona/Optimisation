@@ -11,37 +11,42 @@
 </head>
 
 <body>
-    <div class="header">
-        <h1 style="visibility: hidden;">Cookie Cookie Shop</h1>
-        <a href="/">
-            <i class="fa-solid fa-cookie-bite"></i>
-            <p href="https://storycom.github.io/Cookie-Cookie/">Cookie Cookie</p>
-        </a>
-
-        <button class="menu-toggle" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <ul id="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Menu</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </ul>
-
-        <i id="Cart" class="fa-solid fa-cart-shopping"></i>
-
-        <div id="cart-content" style="display: none;">
-            <button id="close-cart">X</button>
-            <h3>Mon panier</h3>
-            <ul id="cart-items"></ul>
-            <p>Total: $<span id="cart-total"></span></p>
-            <div class="buttonzone">
-                <button id="clear-cart">Vider le panier</button>
-                <button id="checkout">Valider la commande</button>
+    <!-- Add <header> -->
+    <header>
+        <!-- change class"header" → "divHeader" -->
+        <div class="divHeader">
+            <a href="/">
+                <i class="fa-solid fa-cookie-bite"></i>
+                <h1>Cookie Cookie Shop</h1>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Add <nav> -->
+            <nav>
+                <ul id="nav-links">
+                    <!-- add <li> -->
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <i id="Cart" class="fa-solid fa-cart-shopping"></i>
+            <div id="cart-content">
+                <button id="close-cart">X</button>
+                <!-- update h3 → p -->
+                <p>My cart</p>
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="cart-total"></span></p>
+                <div class="buttonzone">
+                    <!-- update text french → english -->
+                    <button id="clear-cart">Clear cart</button>
+                    <button id="checkout">Confirm order</button>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 
     <!-- div id="main-content" devient main -->
     <main>
@@ -226,8 +231,8 @@
         </form>
     </footer>
 
-    <script src="js/script.js"></script>
+       
+       <script src="js/script.js"></script>
 
-</body>
-
+    </body>
 </html>
