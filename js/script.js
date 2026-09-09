@@ -101,22 +101,22 @@ clearCartButton.addEventListener('click', () => {
 const checkoutButton = document.getElementById('checkout');
 checkoutButton.addEventListener('click', () => {
     // Vérifier si le panier n'est pas vide dans le localStorage
-    if (localStorage.getItem('cart')) {
-        // Générer un ID aléatoire pour le bon de commande (juste pour l'exemple)
-        const orderId = Math.floor(Math.random() * 1000000);
-
-        // Afficher un message avec l'ID de commande
-        alert(`Commande validée! Numéro de commande: ${orderId}`);
-
-        // Vider le localStorage
-        localStorage.removeItem('cart');
-        // Mettre à jour l'affichage du panier
-        document.getElementById('cart-items').innerHTML = '';
-        document.getElementById('cart-total').textContent = '0.00';
-    } else {
+    // delete if/else statement for better structure 
+    if (!localStorage.getItem('cart')) {
         // Si le panier est vide, afficher un message d'erreur ou une notification
         alert("Votre panier est vide. Ajoutez des articles avant de valider la commande.");
-    }
+        return
+    } 
+    // Générer un ID aléatoire pour le bon de commande (juste pour l'exemple)
+    const orderId = Math.floor(Math.random() * 1000000);
 
+    // Afficher un message avec l'ID de commande
+    alert(`Commande validée! Numéro de commande: ${orderId}`);
+
+    // Vider le localStorage
+    localStorage.removeItem('cart');
+    // Mettre à jour l'affichage du panier
+    document.getElementById('cart-items').innerHTML = '';
+    document.getElementById('cart-total').textContent = '0.00';
 });
 
