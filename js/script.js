@@ -59,12 +59,13 @@ document.getElementById('Cart').addEventListener('click', () => {
 
     // Générer le HTML pour chaque produit
     cart.forEach(item => {
+        let priceTotal = item.price * item.quantity;
         const li = document.createElement('li');
-        li.textContent = `${item.name} - $${item.price}`;
+        li.textContent = `${item.name} - $${priceTotal} - ${item.quantity}`;
         cartItems.appendChild(li);
 
         // Calculer le total
-        total += parseFloat(item.price);
+        total += parseFloat(priceTotal);
     });
 
     // Afficher le total
