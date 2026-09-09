@@ -14,22 +14,15 @@ allButton.forEach(button => {
     button.addEventListener('click', () => {
         const productName = button.getAttribute('data-name');
         const productPrice = button.getAttribute('data-price');
-        let isInCart = false 
+        
 
         // Récupérer les éléments actuels du panier dans le localStorage
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        // Verifier si le produit est dans le panier et augmente uniquement la quantité
-        for (const product of cart) {
 
-            if(product.name == productName){
-                product.quantity = product.quantity + 1
-                isInCart = true
-            }
-        }
         // Ajouter le nouveau produit au panier si non present
-        if (!isInCart)
-            cart.push({ name: productName, price: productPrice, quantity: 1 });
+        
+            cart.push({ name: productName, price: productPrice});
 
         // Stocker le panier mis à jour dans le localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
@@ -58,12 +51,13 @@ document.getElementById('Cart').addEventListener('click', () => {
 
     // Générer le HTML pour chaque produit
     cart.forEach(item => {
+        let priceTotal = item.price * item.quantity
         const li = document.createElement('li');
-        li.textContent = `${item.name} - $${item.price}`;
+        li.textContent = `${item.name} - $${priceTotal} - ${item.quantity}`;
         cartItems.appendChild(li);
 
         // Calculer le total
-        total += parseFloat(item.price);
+        total += parseFloat(priceTotal);
     });
 
     // Afficher le total
@@ -115,6 +109,6 @@ checkoutButton.addEventListener('click', () => {
         // Si le panier est vide, afficher un message d'erreur ou une notification
         alert("Votre panier est vide. Ajoutez des articles avant de valider la commande.");
     }
-    
+
 });
 
