@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/58aafaf913.js" crossorigin="anonymous"></script>
-    <meta name="keywords" content="pâtisserie, gâteau, tarte, macaron, éclair, chocolat, dessert, boulangerie, brioche, cookies, muffin, crêpe, croissant, beignet, glaçage, fondant, viennoiserie, galette, madeleine, meringue">
+    <meta name="keywords"
+        content="pâtisserie, gâteau, tarte, macaron, éclair, chocolat, dessert, boulangerie, brioche, cookies, muffin, crêpe, croissant, beignet, glaçage, fondant, viennoiserie, galette, madeleine, meringue">
     <link rel="stylesheet" href="css/style.css">
     <title>Cookie Cookie</title>
 </head>
+
 <body>
     <div class="header">
         <h1 style="visibility: hidden;">Cookie Cookie Shop</h1>
@@ -40,109 +43,115 @@
         </div>
     </div>
 
+    <!-- div id="main-content" devient main -->
+    <main>
 
-    <div id="main-content">
-        <h1 style="display: none;">Cookie Cookie Backery shop</h1>
-        <div id="about" class="section1">
+        <!-- div devient section -->
+        <section class="section1">
             <div>
-                <article>
-                    <h3>Delicious Cookies Baked with Love</h3>
-                    <h4>Indulge in the irresistible flavors of our freshly baked cookies, made with the finest ingredients.</h4>
+                <!-- article devient div -->
+                <div>
+                    <!-- h2 devient h1 -->
+                    <h1>Delicious Cookies Baked with Love</h1>
+                    <!-- h4 devient h2 -->
+                    <h2>Indulge in the irresistible flavors of our freshly baked cookies, made with the finest
+                        ingredients.</h2>
                     <div>
                         <button type="submit">Explore Menu</button>
                         <button type="submit">Contact Us</button>
                     </div>
-                </article>
-                <img src="img/5.jpg">
+                </div>
+                <img src="img/5.webp">
             </div>
-            </div>
-            </div>
+        </section>
+    </main>
+
+    <!-- article devient section -->
+    <section class="section2">
+        <!-- h1 devient h2 -->
+        <!-- delete : style="visibility: hidden;" -->
+        <h2>Cookie Cookie Shop</h2>
+        <div>
+            <!-- h6 -> h3 -->
+            <h3>Our menu</h3>
+            <!-- h3 -> h2 -->
+            <h2>Explore Our Delectable Cookies</h2>
+            <!-- h4 -> h3 -->
+            <h3>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</h3>
         </div>
 
-        <article class="section2">
-        <h1 style="visibility: hidden;">Cookie Cookie Shop</h1>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div>
-                <h6>Our menu</h6>
-                <h3>Explore Our Delectable Cookies</h3>
-                <h4>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</h4>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        <!-- article -> div -->
+        <div>
+            <h1 style="visibility: hidden;">Cookie Cookie Shop</h1>
+            <figure>
+                <img src="img/1.jpg">
+                <div>
+                    <h3>Chocolate Chip</h3>
+                    <h4>Our classic chocolate chip cookies, baked to perfection.</h4>
+                    <div>
+                        <p>$2.50</p>
+                        <button id="addToCart" data-name="Chocolate Chip" data-price="2.50">Add to Cart</button>
+                    </div>
+                </div>
+            </figure>
+            <figure>
+                <img src="img/2.jpg">
+                <div>
+                    <h3>Oatmeal Raisin</h3>
+                    <h4>Chewy oatmeal cookies with plump raisins</h4>
+                    <div>
+                        <p>$2.25</p>
+                        <button id="addToCart" data-name="Oatmeal Raisin" data-price="2.25">Add to Cart</button>
+                    </div>
+                </div>
+            </figure>
+            <figure>
+                <img src="img/3.jpg">
+                <div>
+                    <h3>Peanut Butter</h3>
+                    <h4>Rich and creamy peanut butter cookies.</h4>
+                    <div>
+                        <p>$2.75</p>
+                        <button id="addToCart" data-name="Peanut Butter" data-price="2.75">Add to Cart</button>
+                    </div>
+                </div>
+            </figure>
+            <figure>
+                <img src="img/4.jpg">
+                <div>
+                    <h3>Sugar</h3>
+                    <h4>Soft and chewy sugar cookies, perfect for any occasion.</h4>
+                    <div>
+                        <p>$2.00</p>
+                        <button id="addToCart" data-name="Sugar" data-price="2.00">Add to Cart</button>
+                    </div>
+                </div>
+            </figure>
+        </div>
+    </section>
 
-            <article>
+    <div class="section3">
         <h1 style="visibility: hidden;">Cookie Cookie Shop</h1>
-                <figure>
-                    <img src="img/1.jpg">
-                    <div>
-                        <h3>Chocolate Chip</h3>
-                        <h4>Our classic chocolate chip cookies, baked to perfection.</h4>
-                        <div>
-                            <p>$2.50</p>
-                            <button id="addToCart" data-name="Chocolate Chip" data-price="2.50">Add to Cart</button>
-                        </div>
-                    </div>
-                </figure>
-                <figure>
-                    <img src="img/2.jpg">
-                    <div>
-                        <h3>Oatmeal Raisin</h3>
-                        <h4>Chewy oatmeal cookies with plump raisins</h4>
-                        <div>
-                            <p>$2.25</p>
-                            <button id="addToCart" data-name="Oatmeal Raisin" data-price="2.25">Add to Cart</button>
-                        </div>
-                    </div>
-                </figure>
-                <figure>
-                    <img src="img/3.jpg">
-                    <div>
-                        <h3>Peanut Butter</h3>
-                        <h4>Rich and creamy peanut butter cookies.</h4>
-                        <div>
-                            <p>$2.75</p>
-                            <button id="addToCart" data-name="Peanut Butter" data-price="2.75">Add to Cart</button>
-                        </div>
-                    </div>
-                </figure>
-                <figure>
-                    <img src="img/4.jpg">
-                    <div>
-                        <h3>Sugar</h3>
-                        <h4>Soft and chewy sugar cookies, perfect for any occasion.</h4>
-                        <div>
-                            <p>$2.00</p>
-                            <button id="addToCart" data-name="Sugar" data-price="2.00">Add to Cart</button>
-                        </div>
-                    </div>
-                </figure>
-            </article>
+        <img src="img/6.jpg">
+        <article>
+            <h6>About us</h6>
+            <h3>Baking with Passion and Tradition</h3>
+            <br><br>
+            <h4>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and
+                dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and
+                infused with the warmth and comfort of a neighborhood bakeshop.</h4>
+            <br><br>
+            <h4>We take pride in our commitment to quality, sustainability, and supporting local suppliers. Our mission
+                is to bring joy and delight to every customer who steps through our doors or visits our online shop.
+            </h4>
         </article>
-
-        <div class="section3">
-        <h1 style="visibility: hidden;">Cookie Cookie Shop</h1>
-            <img src="img/6.jpg">
-            <article>
-                <h6>About us</h6>
-                <h3>Baking with Passion and Tradition</h3>
-                <br><br>
-                <h4>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and infused with the warmth and comfort of a neighborhood bakeshop.</h4>
-                <br><br>
-                <h4>We take pride in our commitment to quality, sustainability, and supporting local suppliers. Our mission is to bring joy and delight to every customer who steps through our doors or visits our online shop.</h4>
-            </article>
-        </div>
+    </div>
     </div>
     <main id="contact">
         <h6>Contact Us</h6>
         <h3>Get in Touch</h3>
-        <h4>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</h4>
+        <h4>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as
+            soon as possible.</h4>
         <br><br><br>
         <span class="formulaire">
             <input type="text" placeholder="Name">
@@ -151,64 +160,71 @@
             <button>Submit</button>
         </span>
     </main>
-       <footer>
+    <footer>
 
-            <!-- pour le css : classe footer devient footerp1 -->
-            <div class="footerp1">
-                <a href="/">
-                    <i class="fa-solid fa-cookie-bite"></i>
-                    <p>Cookie Cookie</p>
-                </a>
+        <!-- pour le css : classe footer devient footerp1 -->
+        <div class="footerp1">
+            <a href="/">
+                <i class="fa-solid fa-cookie-bite"></i>
+                <p>Cookie Cookie</p>
+            </a>
 
-                <!-- div devient ul  -->
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Refund Policy</a></li>
-                </ul>
-            </div>
+            <!-- div devient ul  -->
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Refund Policy</a></li>
+            </ul>
+        </div>
 
-            <!-- div devient article -->
-            <article class="apropos">
-                <h2>A propos</h2>
-                <p>Mon adresse : 140 avenue jacques troussel, 83136 Rocbaron.</p>   
-                <p>Mon numéro de téléphone : 05 56 67 78 89.</p>
-                <p>Je réponds au téléphone du lundi au vendredi de 10 h à 19 h.</p>
-            </article>
+        <!-- div devient article -->
+        <article class="apropos">
+            <h2>About</h2>
+            <p>My address: 140 Avenue Jacques Troussel, 83136 Rocbaron.</p>
+            <p>My phone number: 05 56 67 78 89.</p>
+            <p>I am available by phone Monday to Friday from 10 a.m. to 7 p.m.</p>
+        </article>
 
-            <div class="partenaire">
-                <ul>
-                    <!-- ajout de li -->
-                    <li><a href="https://www.castorama.fr/">Castorama</a></li>
-                    <li><a href="https://www.cash-piscines.com/?utm_source=Google&utm_medium=Search&utm_id=Marque&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw_Eb6NBMMKSsR_T85NYbJpVzO_9AhBy1OgMrgUcKMu7wZJfSKJenvEaAtVsEALw_wcB">Cash piscine</a></li>
-                    <li><a href="https://www.renault.fr/?CAMPAIGN=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_campaign=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_medium=cpc&utm_source=google&utm_content=generic-na-brand-ao-exact-contextual-def_renault-renault&utm_term=renault&&&ppc_keyword=renault&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw-065BEHyfXS9jGutRwLhtxhY-7iV0odY0LqciFY4FWYW9LsqzydaUaAgMjEALw_wcB&gclsrc=aw.ds">Renault</a></li>
-                    <li><a href="https://www.kebab-frites.com/kebab/brignoles-v34474.html">Kebab</a></li>
-                    <li><a href="https://www.credit-agricole.fr/ca-pca/particulier.html">Crédit agricole</a></li>
-                    <li><a href="https://travail-emploi.gouv.fr/droit-du-travail/handicap-et-travail/article/esat-etablissements-ou-services-d-aide-par-le-travail">Travail Emploi</a></li>
-                </ul>
-            </div>
-            <div class="social">
-                <!-- lien et icone match fixed -->
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://x.com/home?lang=fr"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-            
-            <!-- style de base : display none -->
-            <form action="newsletter.php" method="post" style="display: none;"> 
-                <!-- p devient h2 -->
-                <h2>Inscription à la newsletter</h2>
-                
-                <!-- ajout de label -->
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name"><br>
-                <label for="email">E-mail: </label>
-                <input type="text" name="email" id="email"><br>
-                <input type="submit">
-            </form>
-        </footer>
-        
-        <script src="js/script.js"></script>
+        <div class="partenaire">
+            <ul>
+                <!-- ajout de li -->
+                <li><a href="https://www.castorama.fr/">Castorama</a></li>
+                <li><a
+                        href="https://www.cash-piscines.com/?utm_source=Google&utm_medium=Search&utm_id=Marque&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw_Eb6NBMMKSsR_T85NYbJpVzO_9AhBy1OgMrgUcKMu7wZJfSKJenvEaAtVsEALw_wcB">Cash
+                        piscine</a></li>
+                <li><a
+                        href="https://www.renault.fr/?CAMPAIGN=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_campaign=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_medium=cpc&utm_source=google&utm_content=generic-na-brand-ao-exact-contextual-def_renault-renault&utm_term=renault&&&ppc_keyword=renault&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw-065BEHyfXS9jGutRwLhtxhY-7iV0odY0LqciFY4FWYW9LsqzydaUaAgMjEALw_wcB&gclsrc=aw.ds">Renault</a>
+                </li>
+                <li><a href="https://www.kebab-frites.com/kebab/brignoles-v34474.html">Kebab</a></li>
+                <li><a href="https://www.credit-agricole.fr/ca-pca/particulier.html">Crédit agricole</a></li>
+                <li><a
+                        href="https://travail-emploi.gouv.fr/droit-du-travail/handicap-et-travail/article/esat-etablissements-ou-services-d-aide-par-le-travail">Travail
+                        Emploi</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <!-- lien et icone match fixed -->
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/home?lang=fr"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        </div>
 
-    </body>
+        <!-- style de base : display none -->
+        <form action="newsletter.php" method="post" style="display: none;">
+            <!-- p devient h2 -->
+            <h2>Newsletter subscription</h2>
+
+            <!-- ajout de label -->
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name"><br>
+            <label for="email">E-mail: </label>
+            <input type="text" name="email" id="email"><br>
+            <input type="submit">
+        </form>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
 </html>
