@@ -1,29 +1,3 @@
-// Liste des liens à ajouter
-const links = [
-    { href: '/', text: 'Home' },
-    { href: '/menu', text: 'Menu' },
-    { href: '/#about', text: 'About' },
-    { href: '/#contact', text: 'Contact' }
-];
-
-// Fonction pour ajouter des destinations aux liens existants
-function updateAnchors(links, targetElementId) {
-    // Sélectionner l'élément cible
-    const ul = document.getElementById(targetElementId);
-    // Sélectionner tous les éléments <a> enfants de l'élément <ul>
-    const anchors = ul.querySelectorAll('a');
-
-    // Parcourir chaque lien dans la liste
-    links.forEach((link, index) => {
-        // Mettre à jour l'attribut href et le texte de chaque ancre
-        anchors[index].href = link.href;
-        anchors[index].textContent = link.text;
-    });
-}
-
-// Appel de la fonction pour mettre à jour les ancres
-updateAnchors(links, 'nav-links');
-
 
 // Gestion du menu responsive
 document.querySelector('.menu-toggle').addEventListener('click', () => {
@@ -31,21 +5,31 @@ document.querySelector('.menu-toggle').addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
 
-var button = document.querySelector('#addtocart');
+const allButton = document.querySelectorAll('.addToCart');
 
 
 // Ajout au panier
 
-document.querySelectorAll('#addtoCart').forEach(button => {
+allButton.forEach(button => {
     button.addEventListener('click', () => {
         const productName = button.getAttribute('data-name');
         const productPrice = button.getAttribute('data-price');
+        let isInCart = false 
 
         // Récupérer les éléments actuels du panier dans le localStorage
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        // Ajouter le nouveau produit au panier
-        cart.push({ name: productName, price: productPrice });
+        // Verifier si le produit est dans le panier et augmente uniquement la quantité
+        for (const product of cart) {
+
+            if(product.name == productName){
+                product.quantity = product.quantity + 1
+                isInCart = true
+            }
+        }
+        // Ajouter le nouveau produit au panier si non present
+        if (!isInCart)
+            cart.push({ name: productName, price: productPrice, quantity: 1 });
 
         // Stocker le panier mis à jour dans le localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
@@ -58,7 +42,7 @@ document.querySelectorAll('#addtoCart').forEach(button => {
 
 // Affichage du panier
 
-document.getElementById('cart').addEventListener('click', () => {
+document.getElementById('Cart').addEventListener('click', () => {
     const cartContent = document.getElementById('cart-content');
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
@@ -131,5 +115,6 @@ checkoutButton.addEventListener('click', () => {
         // Si le panier est vide, afficher un message d'erreur ou une notification
         alert("Votre panier est vide. Ajoutez des articles avant de valider la commande.");
     }
+    
 });
 
