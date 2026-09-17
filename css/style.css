@@ -30,18 +30,7 @@ h3{
     font-size: 50px;
     font-weight: 700;
 }
-h4{
-    font-size: 20px;
-    font-weight: 400;
-}
-h5{
-    font-size: 18px;
-    font-weight: 400;
-}
-h6{
-    font-size: 16px;
-    font-weight: 400;
-}
+
 
 p{
     font-size: 20px;
@@ -341,7 +330,7 @@ footer{
             color: var(--white);
             display: grid;
             padding-left: 10px;
-            input[type="submit"]{
+            button{
                 background-color: var(--white);
                 color:var(--black);
                 border-style: solid;
