@@ -59,6 +59,7 @@ a{
 header{
     background: var(--black);
     .divHeader{
+        position: relative;
         max-width: 1440px;
         margin: auto;
         display: flex;
@@ -182,8 +183,16 @@ main{
         max-width: 1440px;
         margin: auto;
         >div{
+            text-align: center;
+            padding: 40px 0;
             >p{
                 padding-bottom: 40px;
+            }
+            h2{
+                font-size: 30px;
+            }
+            h3{
+                font-size: 40px;
             }
         }
         .s2d2{
@@ -404,6 +413,24 @@ footer{
     .menu-toggle {
         display: block;
     }
+
+    nav ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        background: #000;
+        width: 100%;
+    }
+
+    header {
+    .divHeader {
+        nav ul {
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}
 }
 @media screen and (max-width:767px){
     /* .header > ul{
@@ -440,6 +467,22 @@ footer{
         text-align: center;
     }
 
+    main {
+        & .section1 {
+            >div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    main {
+    & .section3 {
+        >div {
+            flex-direction: column-reverse;
+        }
+    }
+}
 
     main .section2 .s2d2 {
         display: grid;
