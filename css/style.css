@@ -19,27 +19,22 @@
 }
 
 h1{
-    font-size: 70px;
-    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
-h2{
-    font-size: 50px;
-    font-weight: 700;
-}
-h3{
+h2, h3{
     font-size: 50px;
     font-weight: 700;
 }
 
 
-p{
+
+p, a{
     font-size: 20px;
     font-weight: 400;
 }
 
 a{
-    font-size: 20px;
-    font-weight: 400;
     text-decoration: none;
     color:var(--white);
     transition:all 0.2s ease-in-out;
@@ -82,17 +77,8 @@ header{
     }
 }
 
-.header ul{
-    display: flex;;
-    gap:50px;
-    margin-right: 80px;
-}
 
-.header>a{
-    display: flex;
-    gap:10px;
-    align-items: center;
-}
+
 
 .menu-toggle {
     display: none;
@@ -143,13 +129,6 @@ main{
             align-items: center;
 
             article{
-                h1{
-                    font-size: 40px;
-                    margin-bottom: 10px;
-                }
-                p{
-                    font-size: 20px;
-                }
                 >div{
                     display: flex;
                     gap:24px; 
@@ -177,6 +156,10 @@ main{
     .section2{
         max-width: 1440px;
         margin: auto;
+        >h2{
+            padding: 0 15px;
+            text-align: center;
+        }
         >div{
             text-align: center;
             padding: 40px 0;
