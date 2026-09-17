@@ -134,7 +134,8 @@ header{
 /* Main */
 
 main{
-
+    max-width: 1440px;
+    margin: auto;
     .section1{
         background-color: var(--main-color);
         margin-top: 40px;
