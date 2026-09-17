@@ -120,6 +120,7 @@ header{
     right: 0;
     top: 45px;
     padding: 50px 20px;
+    display: none;
 }
 
 #close-cart{
