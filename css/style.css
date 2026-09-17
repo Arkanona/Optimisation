@@ -218,6 +218,7 @@ main{
                             color: var(--white);
                             transition: all 0.2s;
                             height: 46px;
+                            cursor: pointer;
                         }
                         p{
                             align-self: center;
