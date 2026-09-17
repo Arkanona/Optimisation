@@ -64,7 +64,7 @@ header{
         justify-content: space-between;
         align-items: center;
         padding: 20px 10px;
-        >a{
+        a{
             display: flex;
             align-items: center;
             gap: 20px;
@@ -134,11 +134,8 @@ header{
 /* Main */
 
 main{
-    max-width: 1440px;
-    margin: auto;
     .section1{
         background-color: var(--main-color);
-        margin-top: 40px;
         >div{
             display:grid;
             grid-template-columns: 40% auto;
@@ -146,6 +143,7 @@ main{
             padding:80px 15px;
             max-width: 1440px;
             margin:auto;
+            align-items: center;
 
             article{
                 h1{
@@ -165,9 +163,13 @@ main{
                         border:none;
                         margin-top: 50px;
                         cursor: pointer;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                        background-color: rgba(165, 42, 42, 0.297);
+                        transition: 0.3s ease-out;
 
                         &:hover{
-                            background-color: rgba(165, 42, 42, 0.297);
+                            transform: scale(1.1);
                         }
                     }
                 }
@@ -176,6 +178,8 @@ main{
     }
 
     .section2{
+        max-width: 1440px;
+        margin: auto;
         >div{
             >p{
                 padding-bottom: 40px;
