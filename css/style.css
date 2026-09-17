@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 *{
-    margin:none;
     margin:0;
     font-family: "Open Sans", sans-serif;
 }
@@ -19,11 +18,11 @@ h1{
     font-weight: 700;
 }
 h2{
-    font-size: 65px;
+    font-size: 50px;
     font-weight: 700;
 }
 h3{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
 }
 h4{
@@ -178,11 +177,22 @@ main{
     }
 
     .section2{
+        h3{
+            padding-bottom: 30px;
+        }
+        >div{
+            >p{
+                padding-bottom: 40px;
+            }
+        }
         .s2d2{
             display: flex;
+            gap: 20px;
             article {
                 flex: 1 0 20%;
                 box-shadow: 3px 5px 12px 18px #f7f6f6;
+                flex-direction: column;
+
                 img{
                     height: 200px;
                 }
@@ -192,8 +202,27 @@ main{
                     flex-direction: column;
                     justify-content: space-between;
                     padding: 12px;
+                    text-align: start;
                     h3{
                         font-size: 20px;
+                        font-weight: 500;
+                    }
+                    h4{
+                        font-size: 14px;
+                        text-align: start;
+                    }
+                    div{
+                        flex-direction: row;
+                        place-items: self-end;
+                        button{
+                            background-color: var(--black);
+                            color: var(--white);
+                            transition: all 0.2s;
+                            height: 46px;
+                        }
+                        p{
+                            align-self: center;
+                        }
                     }
                 }
             }
@@ -357,7 +386,7 @@ article.section2{
 }
 
 main{
-    max-width: 860px;
+    max-width: 1440px;
     margin:auto;
     text-align: center;
 }
