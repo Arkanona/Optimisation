@@ -29,7 +29,6 @@ allButton.forEach(button => {
         }
 
         // Ajouter le nouveau produit au panier si non present
-        console.log(isInCart)
         if(!isInCart)
             cart.push({ name: productName, price: productPrice, quantity: 1});
 
@@ -61,7 +60,7 @@ document.getElementById('Cart').addEventListener('click', () => {
 
     // Générer le HTML pour chaque produit
     cart.forEach(item => {
-        let priceTotal = item.price * item.quantity;
+        const priceTotal = item.price * item.quantity;
         const li = document.createElement('li');
         li.textContent = `${item.name} - $${priceTotal} - ${item.quantity}`;
         cartItems.appendChild(li);
@@ -110,7 +109,7 @@ checkoutButton.addEventListener('click', () => {
         return
     } 
     // Générer un ID aléatoire pour le bon de commande (juste pour l'exemple)
-    const orderId = Math.floor(Math.random() * 1000000);
+    const orderId = Math.floor(Math.random() * 1_000_000);
 
     // Afficher un message avec l'ID de commande
     alert(`Commande validée! Numéro de commande: ${orderId}`);
