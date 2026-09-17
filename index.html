@@ -167,65 +167,68 @@
     </main>
 
     <footer>
-        <!-- pour le css : classe footer devient footerp1 -->
-        <div class="footerp1">
-            <a href="/">
-                <i class="fa-solid fa-cookie-bite"></i>
-                <p>Cookie Cookie</p>
-            </a>
+        <!-- pour adapter le bg noir, ajout grande div footer -->
+        <div id="footer">
+            <!-- pour le css : classe footer devient footerp1 -->
+            <div class="footerp1">
+                <a href="/">
+                    <i class="fa-solid fa-cookie-bite"></i>
+                    <p>Cookie Cookie</p>
+                </a>
 
-            <!-- div devient ul  -->
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Refund Policy</a></li>
-            </ul>
+                <!-- div devient ul  -->
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- div devient article -->
+            <article class="apropos">
+                <h2>About</h2>
+                <p>My address: 140 Avenue Jacques Troussel, 83136 Rocbaron.</p>
+                <p>My phone number: 05 56 67 78 89.</p>
+                <p>I am available by phone Monday to Friday from 10 a.m. to 7 p.m.</p>
+            </article>
+
+            <div class="partenaire">
+                <ul>
+                    <!-- ajout de li -->
+                    <li><a href="https://www.castorama.fr/">Castorama</a></li>
+                    <li><a
+                            href="https://www.cash-piscines.com/?utm_source=Google&utm_medium=Search&utm_id=Marque&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw_Eb6NBMMKSsR_T85NYbJpVzO_9AhBy1OgMrgUcKMu7wZJfSKJenvEaAtVsEALw_wcB">Cash
+                            piscine</a></li>
+                    <li><a
+                            href="https://www.renault.fr/?CAMPAIGN=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_campaign=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_medium=cpc&utm_source=google&utm_content=generic-na-brand-ao-exact-contextual-def_renault-renault&utm_term=renault&&&ppc_keyword=renault&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw-065BEHyfXS9jGutRwLhtxhY-7iV0odY0LqciFY4FWYW9LsqzydaUaAgMjEALw_wcB&gclsrc=aw.ds">Renault</a>
+                    </li>
+                    <li><a href="https://www.kebab-frites.com/kebab/brignoles-v34474.html">Kebab</a></li>
+                    <li><a href="https://www.credit-agricole.fr/ca-pca/particulier.html">Crédit agricole</a></li>
+                    <li><a
+                            href="https://travail-emploi.gouv.fr/droit-du-travail/handicap-et-travail/article/esat-etablissements-ou-services-d-aide-par-le-travail">Travail
+                            Emploi</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <!-- lien et icone match fixed -->
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/home?lang=fr"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+
+            <!-- style de base : display none -->
+            <form action="#" method="post">
+                <!-- p devient h2 -->
+                <h2>Newsletter subscription</h2>
+
+                <!-- ajout de label -->
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" autocomplete="name">
+                <label for="email">E-mail: </label>
+                <input type="text" name="email" id="email" autocomplete="email">
+                <input type="submit">
+            </form>
         </div>
-
-        <!-- div devient article -->
-        <article class="apropos">
-            <h2>About</h2>
-            <p>My address: 140 Avenue Jacques Troussel, 83136 Rocbaron.</p>
-            <p>My phone number: 05 56 67 78 89.</p>
-            <p>I am available by phone Monday to Friday from 10 a.m. to 7 p.m.</p>
-        </article>
-
-        <div class="partenaire">
-            <ul>
-                <!-- ajout de li -->
-                <li><a href="https://www.castorama.fr/">Castorama</a></li>
-                <li><a
-                        href="https://www.cash-piscines.com/?utm_source=Google&utm_medium=Search&utm_id=Marque&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw_Eb6NBMMKSsR_T85NYbJpVzO_9AhBy1OgMrgUcKMu7wZJfSKJenvEaAtVsEALw_wcB">Cash
-                        piscine</a></li>
-                <li><a
-                        href="https://www.renault.fr/?CAMPAIGN=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_campaign=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_medium=cpc&utm_source=google&utm_content=generic-na-brand-ao-exact-contextual-def_renault-renault&utm_term=renault&&&ppc_keyword=renault&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw-065BEHyfXS9jGutRwLhtxhY-7iV0odY0LqciFY4FWYW9LsqzydaUaAgMjEALw_wcB&gclsrc=aw.ds">Renault</a>
-                </li>
-                <li><a href="https://www.kebab-frites.com/kebab/brignoles-v34474.html">Kebab</a></li>
-                <li><a href="https://www.credit-agricole.fr/ca-pca/particulier.html">Crédit agricole</a></li>
-                <li><a
-                        href="https://travail-emploi.gouv.fr/droit-du-travail/handicap-et-travail/article/esat-etablissements-ou-services-d-aide-par-le-travail">Travail
-                        Emploi</a></li>
-            </ul>
-        </div>
-        <div class="social">
-            <!-- lien et icone match fixed -->
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/home?lang=fr"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-        </div>
-
-        <!-- style de base : display none -->
-        <form action="#" method="post">
-            <!-- p devient h2 -->
-            <h2>Newsletter subscription</h2>
-
-            <!-- ajout de label -->
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" autocomplete="name">
-            <label for="email">E-mail: </label>
-            <input type="text" name="email" id="email" autocomplete="email">
-            <input type="submit">
-        </form>
     </footer>
 
        
