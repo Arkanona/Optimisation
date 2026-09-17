@@ -10,11 +10,11 @@ const allButton = document.querySelectorAll('.addToCart');
 
 // Ajout au panier
 
+let isInCart = false
 allButton.forEach(button => {
     button.addEventListener('click', () => {
         const productName = button.getAttribute('data-name');
         const productPrice = button.getAttribute('data-price');
-        let isInCart = false
         
 
         // Récupérer les éléments actuels du panier dans le localStorage
@@ -29,6 +29,7 @@ allButton.forEach(button => {
         }
 
         // Ajouter le nouveau produit au panier si non present
+        console.log(isInCart)
         if(!isInCart)
             cart.push({ name: productName, price: productPrice, quantity: 1});
 
@@ -37,6 +38,7 @@ allButton.forEach(button => {
 
         // Afficher une alerte
         alert(`${productName} a été ajouté au panier!`);
+        isInCart = false
     });
 });
 
